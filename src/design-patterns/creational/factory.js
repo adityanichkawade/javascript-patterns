@@ -38,3 +38,5 @@ class ButtonsFactory {
     return buttonType ? buttonType() : null;
   }
 }
+
+export default ButtonsFactory;
