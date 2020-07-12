@@ -1,7 +1,7 @@
 class Iterator {
   constructor() {
-    this._index = 0;
-    this._items = [];
+    this.itemIndex = 0;
+    this.items = [];
   }
 
   hasNext() {
@@ -10,14 +10,17 @@ class Iterator {
   }
 
   next() {
-    return this.hasNext() ? this._items[this._index++] : null;
+    this.itemIndex += 1;
+    return this.hasNext() ? this.items[this.itemIndex] : null;
   }
 
   add(item) {
-    this._items.push(item);
+    this.items.push(item);
   }
 
   first() {
-    this._index = 0;
+    this.itemIndex = 0;
   }
 }
+
+export default Iterator;
