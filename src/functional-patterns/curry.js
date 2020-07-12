@@ -4,3 +4,5 @@ const curry = (func) =>
       ? func.apply(this, args)
       : (...args1) => curried.apply(this, args.concat(args1));
   };
+
+export default curry;
